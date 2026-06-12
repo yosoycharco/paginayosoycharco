@@ -1,0 +1,1618 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yo Soy C.H.A.R.C.O. — Hernán A. Venegas Lagos</title>
+  <meta name="description" content="Ingeniería de Vida: Salud, Mente y Libertad para el líder moderno. Hernán A. Venegas Lagos — Yo Soy C.H.A.R.C.O." />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Yo Soy C.H.A.R.C.O. — Hernán A. Venegas Lagos" />
+  <meta property="og:description" content="Salud, Mente y Libertad para el líder moderno. Libros · Amway · Red de Socios — Plottier, Neuquén." />
+  <meta property="og:image" content="https://yosoycharco.com/assets/hernan-perfil.jpg" />
+  <meta property="og:url" content="https://yosoycharco.com" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" type="image/png" href="assets/isotipo-charco-web.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700;800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --verde: #0B3D2E;
+      --verde-mid: #0e4d3a;
+      --verde-light: #155c44;
+      --oro: #D4AF37;
+      --oro-light: #e8c84e;
+      --petroleo: #0F5C6E;
+      --marfil: #F8F5EC;
+      --marfil-dark: #e8e0cc;
+      --texto: #F8F5EC;
+      --texto-muted: rgba(248, 245, 236, 0.65);
+      --glow-oro: rgba(212, 175, 55, 0.25);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--verde);
+      color: var(--texto);
+      font-family: 'Montserrat', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: var(--verde); }
+    ::-webkit-scrollbar-thumb { background: var(--oro); border-radius: 3px; }
+
+    /* ========== NAV ========== */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      padding: 16px 40px;
+      display: flex; align-items: center; justify-content: space-between;
+      transition: background 0.4s, backdrop-filter 0.4s;
+    }
+    nav.scrolled {
+      background: rgba(11, 61, 46, 0.92);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: 12px;
+      text-decoration: none;
+    }
+    .nav-logo img { height: 36px; filter: drop-shadow(0 0 6px var(--glow-oro)); }
+    .nav-brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem; font-weight: 700;
+      color: var(--oro); letter-spacing: 0.05em;
+    }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a {
+      color: var(--marfil); font-size: 0.8rem; font-weight: 500;
+      text-decoration: none; letter-spacing: 0.1em; text-transform: uppercase;
+      transition: color 0.3s;
+    }
+    .nav-links a:hover { color: var(--oro); }
+    .nav-cta {
+      background: transparent;
+      border: 1.5px solid var(--oro);
+      color: var(--oro) !important;
+      padding: 8px 20px; border-radius: 40px;
+      transition: background 0.3s, color 0.3s !important;
+    }
+    .nav-cta:hover { background: var(--oro) !important; color: var(--verde) !important; }
+
+    @media (max-width: 768px) {
+      nav { padding: 14px 20px; }
+      .nav-links { display: none; }
+    }
+
+    /* ========== HERO ========== */
+    #hero {
+      min-height: 100vh;
+      display: flex; align-items: center; justify-content: center;
+      padding: 100px 40px 60px;
+      position: relative; overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 60% 40%, rgba(15, 92, 110, 0.25) 0%, transparent 70%),
+                  radial-gradient(ellipse 50% 50% at 20% 80%, rgba(212, 175, 55, 0.08) 0%, transparent 60%),
+                  var(--verde);
+    }
+    .hero-particles {
+      position: absolute; inset: 0; pointer-events: none;
+      background-image:
+        radial-gradient(circle, rgba(212,175,55,0.5) 1px, transparent 1px),
+        radial-gradient(circle, rgba(212,175,55,0.3) 1px, transparent 1px);
+      background-size: 60px 60px, 30px 30px;
+      background-position: 0 0, 15px 15px;
+      opacity: 0.12;
+    }
+
+    .hero-inner {
+      position: relative; z-index: 1;
+      display: grid; grid-template-columns: 1fr 420px;
+      gap: 60px; align-items: center;
+      max-width: 1200px; width: 100%;
+    }
+
+    /* IG Card */
+    .ig-card {
+      background: rgba(11, 61, 46, 0.6);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      border-radius: 24px;
+      padding: 32px 28px;
+      backdrop-filter: blur(20px);
+      box-shadow: 0 8px 60px rgba(0,0,0,0.4), 0 0 40px rgba(212,175,55,0.06);
+      position: relative;
+    }
+    .ig-card::before {
+      content: '';
+      position: absolute; top: -1px; left: 20%; right: 20%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--oro), transparent);
+    }
+
+    .ig-card-header {
+      display: flex; align-items: center; gap: 16px; margin-bottom: 16px;
+    }
+
+    .ig-avatar-wrap {
+      position: relative; flex-shrink: 0;
+      width: 80px; height: 80px;
+    }
+    .ig-avatar-ring {
+      position: absolute; inset: -3px;
+      border-radius: 50%;
+      background: conic-gradient(var(--oro), var(--petroleo), var(--oro-light), var(--petroleo), var(--oro));
+      animation: spin 4s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .ig-avatar-inner {
+      position: absolute; inset: 3px;
+      border-radius: 50%;
+      background: var(--verde);
+      overflow: hidden;
+    }
+    .ig-avatar-inner img {
+      width: 100%; height: 100%; object-fit: cover;
+    }
+
+    .ig-name-block { flex: 1; }
+    .ig-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem; font-weight: 700;
+      color: var(--marfil); margin-bottom: 2px;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .ig-verified {
+      width: 18px; height: 18px; flex-shrink: 0;
+      background: linear-gradient(135deg, #1DA1F2, #0078d4);
+      border-radius: 50%;
+      display: inline-flex; align-items: center; justify-content: center;
+      box-shadow: 0 2px 8px rgba(29, 161, 242, 0.4);
+    }
+    .ig-verified svg { width: 10px; height: 10px; }
+    .ig-handle {
+      font-size: 0.78rem; color: var(--oro); font-weight: 500;
+      text-decoration: none; transition: opacity 0.2s;
+    }
+    .ig-handle:hover { opacity: 0.8; }
+    .ig-category { font-size: 0.72rem; color: var(--texto-muted); margin-top: 3px; }
+
+    .ig-stats {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 2px; margin: 18px 0;
+      background: rgba(212,175,55,0.1); border-radius: 12px; overflow: hidden;
+    }
+    .ig-stat {
+      padding: 12px 8px; text-align: center;
+      background: rgba(11,61,46,0.5);
+    }
+    .ig-stat-num {
+      font-size: 1.1rem; font-weight: 700; color: var(--oro);
+      font-family: 'Playfair Display', serif;
+      display: block;
+    }
+    .ig-stat-label { font-size: 0.68rem; color: var(--texto-muted); text-transform: uppercase; letter-spacing: 0.05em; }
+
+    .ig-bio {
+      font-size: 0.82rem; line-height: 1.6; color: var(--texto-muted);
+      margin-bottom: 16px;
+    }
+
+    .ig-btns {
+      display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px;
+    }
+    .ig-btn {
+      flex: 1; min-width: 80px;
+      padding: 10px 12px; border-radius: 10px;
+      font-size: 0.75rem; font-weight: 600;
+      text-align: center; text-decoration: none;
+      cursor: pointer; transition: all 0.25s;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .ig-btn-primary {
+      background: var(--oro); color: var(--verde);
+      border: none;
+    }
+    .ig-btn-primary:hover { background: var(--oro-light); transform: translateY(-1px); }
+    .ig-btn-secondary {
+      background: rgba(212,175,55,0.12); color: var(--marfil);
+      border: 1px solid rgba(212,175,55,0.3);
+    }
+    .ig-btn-secondary:hover { background: rgba(212,175,55,0.2); }
+
+    /* Mini photo grid */
+    .ig-grid-label {
+      font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.15em;
+      color: var(--texto-muted); margin-bottom: 8px;
+    }
+    .ig-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 3px; border-radius: 10px; overflow: hidden;
+    }
+    .ig-grid-cell {
+      aspect-ratio: 1;
+      background: linear-gradient(135deg, var(--verde-mid), var(--petroleo));
+      position: relative; overflow: hidden;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .ig-grid-cell img { width: 100%; height: 100%; object-fit: cover; }
+    .ig-grid-placeholder {
+      width: 100%; height: 100%;
+      display: flex; align-items: center; justify-content: center;
+      flex-direction: column; gap: 4px;
+    }
+    .ig-grid-placeholder span {
+      font-size: 1.2rem; opacity: 0.6;
+    }
+    .ig-card-pilar {
+      border: 1px solid rgba(212,175,55,0.2);
+    }
+    .ig-pilar-inner {
+      width: 100%; height: 100%;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 3px;
+      padding: 8px;
+    }
+    .ig-pilar-icon { font-size: 1.4rem; line-height: 1; }
+    .ig-pilar-title {
+      font-size: 0.62rem; font-weight: 800;
+      color: var(--oro); letter-spacing: 0.12em;
+      text-transform: uppercase; line-height: 1;
+    }
+    .ig-pilar-sub {
+      font-size: 0.52rem; color: var(--texto-muted);
+      text-align: center; line-height: 1.2;
+    }
+
+    /* Hero text */
+    .hero-text { padding: 20px 0; }
+    .hero-eyebrow {
+      font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.2em;
+      color: var(--oro); font-weight: 600; margin-bottom: 16px;
+      display: flex; align-items: center; gap: 12px;
+    }
+    .hero-eyebrow::before, .hero-eyebrow::after {
+      content: ''; flex: 1 1 30px; max-width: 40px;
+      height: 1px; background: var(--oro); opacity: 0.5;
+    }
+    .hero-h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.8rem, 5vw, 4.5rem);
+      font-weight: 700; line-height: 1.1;
+      margin-bottom: 8px;
+    }
+    .hero-h1 .gold { color: var(--oro); }
+    .hero-h1 .italic { font-style: italic; }
+    .hero-sub {
+      font-size: 1.1rem; color: var(--texto-muted);
+      line-height: 1.6; margin: 20px 0 32px;
+      max-width: 520px;
+    }
+    .hero-charco-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(212,175,55,0.1); border: 1px solid rgba(212,175,55,0.25);
+      border-radius: 40px; padding: 10px 20px; margin-bottom: 32px;
+      font-size: 0.78rem; color: var(--oro); letter-spacing: 0.05em;
+    }
+    .hero-community {
+      display: flex; align-items: center; gap: 20px;
+    }
+    .hero-community-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem; font-weight: 700; color: var(--oro);
+      line-height: 1;
+    }
+    .hero-community-label { font-size: 0.78rem; color: var(--texto-muted); max-width: 120px; }
+    .hero-divider { width: 1px; height: 50px; background: rgba(212,175,55,0.3); }
+
+    @media (max-width: 1024px) {
+      .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+      .ig-card { max-width: 420px; margin: 0 auto; }
+      .hero-text { order: -1; text-align: center; }
+      .hero-community { justify-content: center; }
+      .hero-sub { margin-left: auto; margin-right: auto; }
+    }
+    @media (max-width: 480px) {
+      #hero { padding: 90px 20px 50px; }
+    }
+
+    /* ========== SECTION BASE ========== */
+    section { padding: 90px 40px; }
+    .section-inner { max-width: 1200px; margin: 0 auto; }
+    .section-tag {
+      font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.2em;
+      color: var(--oro); font-weight: 600; margin-bottom: 12px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .section-tag::before { content: '—'; }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 700; line-height: 1.15;
+      margin-bottom: 24px;
+    }
+    .section-title .gold { color: var(--oro); }
+    .section-title .italic { font-style: italic; }
+
+    /* ========== CHARCO SECTION ========== */
+    #charco {
+      background: linear-gradient(180deg, var(--verde) 0%, rgba(15,92,110,0.15) 50%, var(--verde) 100%);
+    }
+    .charco-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 60px; align-items: start;
+    }
+    .charco-intro {
+      font-size: 1rem; line-height: 1.8; color: var(--texto-muted);
+      margin-bottom: 28px;
+    }
+    .charco-intro strong { color: var(--marfil); }
+    .charco-acronym {
+      display: flex; flex-direction: column; gap: 12px; margin-top: 40px;
+    }
+    .acronym-row {
+      display: flex; align-items: flex-start; gap: 16px;
+      padding: 16px 20px;
+      background: rgba(212,175,55,0.05);
+      border: 1px solid rgba(212,175,55,0.15);
+      border-left: 3px solid var(--oro);
+      border-radius: 0 12px 12px 0;
+      transition: background 0.3s, transform 0.3s;
+    }
+    .acronym-row:hover { background: rgba(212,175,55,0.1); transform: translateX(4px); }
+    .acronym-letter {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem; font-weight: 700; color: var(--oro);
+      line-height: 1; flex-shrink: 0; width: 28px;
+    }
+    .acronym-content {}
+    .acronym-word { font-size: 0.9rem; font-weight: 700; color: var(--marfil); margin-bottom: 2px; }
+    .acronym-desc { font-size: 0.78rem; color: var(--texto-muted); }
+
+    .charco-right { position: relative; }
+    .charco-image-wrap {
+      border-radius: 20px; overflow: hidden;
+      border: 1px solid rgba(212,175,55,0.2);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+      position: relative;
+    }
+    .charco-image-wrap img { width: 100%; display: block; }
+    .charco-image-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(11,61,46,0.7) 0%, transparent 50%);
+    }
+    .charco-badge-float {
+      position: absolute; bottom: 24px; left: 24px; right: 24px;
+      background: rgba(11,61,46,0.85);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(212,175,55,0.3);
+      border-radius: 12px; padding: 16px 20px;
+    }
+    .charco-badge-float .quote {
+      font-family: 'Playfair Display', serif; font-style: italic;
+      font-size: 0.9rem; color: var(--marfil); margin-bottom: 8px;
+    }
+    .charco-badge-float .author { font-size: 0.72rem; color: var(--oro); }
+
+    @media (max-width: 900px) {
+      .charco-grid { grid-template-columns: 1fr; gap: 40px; }
+    }
+    @media (max-width: 480px) {
+      section { padding: 70px 20px; }
+    }
+
+    /* ========== NEGOCIO SECTION ========== */
+    #negocio {
+      background: rgba(11,61,46,0.5);
+    }
+    .negocio-header { text-align: center; margin-bottom: 40px; }
+
+    /* Flujo visual */
+    .ecosistema-flujo {
+      display: flex; align-items: center; justify-content: center;
+      gap: 16px; margin-bottom: 48px;
+    }
+    .flujo-step {
+      text-align: center;
+      background: rgba(212,175,55,0.08); border: 1px solid rgba(212,175,55,0.2);
+      border-radius: 12px; padding: 12px 28px;
+    }
+    .flujo-num { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700; color: var(--oro); line-height: 1; }
+    .flujo-label { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--texto-muted); margin-top: 4px; }
+    .flujo-arrow { font-size: 1.2rem; color: var(--oro); opacity: 0.6; }
+
+    /* Resumen inferior */
+    .ecosistema-resumen {
+      display: flex; align-items: center; justify-content: center;
+      gap: 20px; flex-wrap: wrap;
+      background: rgba(11,61,46,0.6);
+      border: 1px solid rgba(212,175,55,0.15);
+      border-radius: 16px; padding: 24px 32px;
+    }
+    .resumen-item { display: flex; align-items: center; gap: 12px; }
+    .resumen-icon { font-size: 1.8rem; flex-shrink: 0; }
+    .resumen-title { font-size: 0.85rem; font-weight: 700; color: var(--marfil); }
+    .resumen-desc { font-size: 0.72rem; color: var(--texto-muted); }
+    .resumen-flecha { font-size: 1.4rem; color: rgba(212,175,55,0.4); }
+
+    .negocio-card-header { margin: -36px -28px 20px; padding: 24px 28px 20px; }
+
+    @media (max-width: 600px) {
+      .ecosistema-flujo { gap: 8px; }
+      .flujo-step { padding: 10px 16px; }
+      .ecosistema-resumen { flex-direction: column; gap: 16px; }
+      .resumen-flecha { transform: rotate(90deg); }
+    }
+    .negocio-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+    }
+    .negocio-card {
+      background: rgba(11,61,46,0.6);
+      border: 1px solid rgba(212,175,55,0.2);
+      border-radius: 20px; padding: 36px 28px;
+      text-align: center; position: relative; overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    }
+    .negocio-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 60px rgba(0,0,0,0.3), 0 0 30px var(--glow-oro);
+      border-color: rgba(212,175,55,0.5);
+    }
+    .negocio-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, transparent, var(--oro), transparent);
+      opacity: 0; transition: opacity 0.3s;
+    }
+    .negocio-card:hover::before { opacity: 1; }
+    .negocio-step {
+      display: inline-block;
+      background: rgba(212,175,55,0.15); border: 1px solid rgba(212,175,55,0.3);
+      border-radius: 40px; padding: 4px 14px;
+      font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.15em;
+      color: var(--oro); margin-bottom: 20px;
+    }
+    .negocio-icon { font-size: 2.8rem; margin-bottom: 16px; display: block; }
+    .negocio-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem; font-weight: 700; color: var(--marfil);
+      margin-bottom: 12px;
+    }
+    .negocio-desc { font-size: 0.82rem; color: var(--texto-muted); line-height: 1.7; }
+    .negocio-items { list-style: none; text-align: left; margin-top: 16px; }
+    .negocio-items li {
+      font-size: 0.78rem; color: var(--texto-muted);
+      padding: 6px 0; border-bottom: 1px solid rgba(248,245,236,0.07);
+      display: flex; align-items: center; gap: 8px;
+    }
+    .negocio-items li::before { content: '→'; color: var(--oro); flex-shrink: 0; }
+
+    @media (max-width: 900px) {
+      .negocio-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
+    }
+
+    /* ========== METRICS SECTION ========== */
+    #metricas {
+      background: linear-gradient(135deg, rgba(15,92,110,0.2) 0%, rgba(11,61,46,0.95) 50%, rgba(15,92,110,0.15) 100%);
+    }
+    .metricas-header { text-align: center; margin-bottom: 60px; }
+    .metricas-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;
+    }
+    .metrica-card {
+      background: rgba(11,61,46,0.7);
+      border: 1px solid rgba(212,175,55,0.2);
+      border-radius: 18px; padding: 32px 20px; text-align: center;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+    .metrica-card:hover { border-color: rgba(212,175,55,0.5); transform: translateY(-4px); }
+    .metrica-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem; font-weight: 700; color: var(--oro);
+      line-height: 1; margin-bottom: 8px;
+      display: block;
+    }
+    .metrica-unit { font-size: 1.5rem; }
+    .metrica-label { font-size: 0.75rem; color: var(--texto-muted); text-transform: uppercase; letter-spacing: 0.1em; }
+    @media (max-width: 900px) {
+      .metricas-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 480px) {
+      .metricas-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    }
+
+    /* ========== TESTIMONIO ========== */
+    #testimonio { background: var(--verde); }
+    .testimonio-wrap {
+      max-width: 800px; margin: 0 auto; text-align: center;
+      position: relative;
+    }
+    .testimonio-marks {
+      font-family: 'Playfair Display', serif;
+      font-size: 8rem; line-height: 0.5; color: var(--oro);
+      opacity: 0.2; margin-bottom: -20px; display: block;
+    }
+    .testimonio-text {
+      font-family: 'Playfair Display', serif; font-style: italic;
+      font-size: clamp(1.1rem, 2.5vw, 1.4rem); line-height: 1.7;
+      color: var(--marfil); margin-bottom: 28px;
+    }
+    .testimonio-author {
+      display: flex; align-items: center; justify-content: center; gap: 14px;
+    }
+    .testimonio-avatar {
+      width: 48px; height: 48px; border-radius: 50%; overflow: hidden;
+      border: 2px solid var(--oro);
+      flex-shrink: 0;
+    }
+    .testimonio-avatar img { width: 100%; height: 100%; object-fit: cover; }
+    .testimonio-name-block { text-align: left; }
+    .testimonio-name { font-size: 0.9rem; font-weight: 700; color: var(--marfil); }
+    .testimonio-role { font-size: 0.75rem; color: var(--oro); }
+
+    /* ========== PAGOS ========== */
+    #pagos {
+      background: rgba(11,61,46,0.4);
+    }
+    .pagos-header { text-align: center; margin-bottom: 60px; }
+    .pagos-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 900px; margin: 0 auto;
+    }
+    .pago-card {
+      background: rgba(11,61,46,0.7);
+      border: 1px solid rgba(212,175,55,0.2);
+      border-radius: 16px; padding: 28px;
+      display: flex; align-items: flex-start; gap: 16px;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+    .pago-card:hover { border-color: rgba(212,175,55,0.4); transform: translateY(-3px); }
+    .pago-icon { font-size: 2rem; flex-shrink: 0; }
+    .pago-title { font-size: 0.9rem; font-weight: 700; color: var(--marfil); margin-bottom: 4px; }
+    .pago-desc { font-size: 0.78rem; color: var(--texto-muted); line-height: 1.5; }
+    .pago-highlight { color: var(--oro); font-weight: 700; }
+    @media (max-width: 600px) { .pagos-grid { grid-template-columns: 1fr; } }
+
+    /* ========== CONTACTO ========== */
+    #contacto {
+      background: linear-gradient(180deg, var(--verde) 0%, rgba(15,92,110,0.15) 100%);
+    }
+    .contacto-inner {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start;
+    }
+    .contacto-cta {
+      background: rgba(212,175,55,0.08);
+      border: 1px solid rgba(212,175,55,0.25);
+      border-radius: 20px; padding: 36px;
+    }
+    .contacto-cta .section-title { font-size: 1.8rem; margin-bottom: 16px; }
+    .contacto-desc {
+      font-size: 0.9rem; color: var(--texto-muted); line-height: 1.7; margin-bottom: 28px;
+    }
+    .contacto-links { display: flex; flex-direction: column; gap: 14px; }
+    .contacto-link {
+      display: flex; align-items: center; gap: 14px;
+      padding: 14px 18px; border-radius: 12px;
+      background: rgba(11,61,46,0.5);
+      border: 1px solid rgba(212,175,55,0.15);
+      text-decoration: none; color: var(--marfil);
+      font-size: 0.85rem; font-weight: 500;
+      transition: all 0.3s;
+    }
+    .contacto-link:hover { border-color: rgba(212,175,55,0.4); background: rgba(212,175,55,0.08); color: var(--oro); }
+    .contacto-link-icon { font-size: 1.4rem; flex-shrink: 0; }
+    .contacto-link-label { font-size: 0.68rem; color: var(--texto-muted); text-transform: uppercase; letter-spacing: 0.1em; }
+    .contacto-link-value { font-weight: 600; }
+
+    .contacto-form {
+      background: rgba(11,61,46,0.5);
+      border: 1px solid rgba(212,175,55,0.2);
+      border-radius: 20px; padding: 36px;
+    }
+    .form-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem; font-weight: 700; color: var(--marfil);
+      margin-bottom: 24px;
+    }
+    .form-group { margin-bottom: 18px; }
+    .form-group label { display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--texto-muted); margin-bottom: 8px; }
+    .form-group input, .form-group textarea, .form-group select {
+      width: 100%; padding: 12px 16px;
+      background: rgba(11,61,46,0.7);
+      border: 1px solid rgba(212,175,55,0.2);
+      border-radius: 10px; color: var(--marfil);
+      font-family: 'Montserrat', sans-serif; font-size: 0.85rem;
+      outline: none; transition: border-color 0.3s;
+    }
+    .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+      border-color: rgba(212,175,55,0.5);
+    }
+    .form-group textarea { resize: vertical; min-height: 100px; }
+    .form-group select option { background: var(--verde); }
+    .btn-enviar {
+      width: 100%; padding: 15px;
+      background: linear-gradient(135deg, var(--oro), var(--oro-light));
+      color: var(--verde); font-family: 'Montserrat', sans-serif;
+      font-size: 0.85rem; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; border: none; border-radius: 10px;
+      cursor: pointer; transition: all 0.3s;
+    }
+    .btn-enviar:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(212,175,55,0.3); }
+
+    @media (max-width: 900px) {
+      .contacto-inner { grid-template-columns: 1fr; gap: 32px; }
+    }
+
+    /* ========== FOOTER ========== */
+    footer {
+      background: rgba(0,0,0,0.3);
+      border-top: 1px solid rgba(212,175,55,0.15);
+      padding: 40px;
+      text-align: center;
+    }
+    .footer-logo { margin-bottom: 20px; }
+    .footer-logo img { height: 50px; opacity: 0.9; }
+    .footer-tagline {
+      font-family: 'Playfair Display', serif; font-style: italic;
+      font-size: 0.9rem; color: var(--texto-muted); margin-bottom: 24px;
+    }
+    .footer-redes { display: flex; justify-content: center; gap: 16px; margin-bottom: 24px; }
+    .footer-red {
+      width: 42px; height: 42px; border-radius: 50%;
+      background: rgba(212,175,55,0.1);
+      border: 1px solid rgba(212,175,55,0.25);
+      display: flex; align-items: center; justify-content: center;
+      text-decoration: none; font-size: 1rem; color: var(--marfil);
+      transition: all 0.3s;
+    }
+    .footer-red:hover { background: rgba(212,175,55,0.2); border-color: var(--oro); color: var(--oro); }
+    .footer-copy { font-size: 0.72rem; color: rgba(248,245,236,0.35); }
+
+    /* ========== REVEAL ANIMATIONS ========== */
+    .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+    .reveal-delay-5 { transition-delay: 0.5s; }
+
+    /* WA Float */
+    .wa-float {
+      position: fixed; bottom: 28px; right: 28px; z-index: 50;
+      width: 58px; height: 58px; border-radius: 50%;
+      background: #25D366; color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      text-decoration: none; font-size: 1.6rem;
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .wa-float:hover { transform: scale(1.1); box-shadow: 0 6px 30px rgba(37,211,102,0.5); }
+
+    /* ========== BANNER SISTEMA ========== */
+    .banner-sistema {
+      width: 100%; border-radius: 20px; overflow: hidden;
+      border: 1px solid rgba(212,175,55,0.25);
+      box-shadow: 0 12px 50px rgba(0,0,0,0.4);
+      position: relative; cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+      display: block; text-decoration: none;
+    }
+    .banner-sistema:hover { transform: translateY(-4px); box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 40px var(--glow-oro); }
+    .banner-sistema img { width: 100%; display: block; }
+    .banner-sistema-cta {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      padding: 20px 28px;
+      background: linear-gradient(to top, rgba(11,61,46,0.92) 0%, transparent 100%);
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .banner-sistema-cta span {
+      font-size: 0.8rem; font-weight: 700; color: var(--oro);
+      text-transform: uppercase; letter-spacing: 0.15em;
+    }
+    .banner-sistema-cta .arrow {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: var(--oro); color: var(--verde);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; font-weight: 700; flex-shrink: 0;
+    }
+
+    /* ========== PRODUCTOS SECTION ========== */
+    #productos { background: var(--verde); }
+    .productos-header { text-align: center; margin-bottom: 60px; }
+    .productos-layout {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 40px; align-items: start; margin-bottom: 50px;
+    }
+    .productos-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+    }
+    .producto-card {
+      background: rgba(11,61,46,0.7);
+      border: 1px solid rgba(212,175,55,0.15);
+      border-radius: 14px; overflow: hidden;
+      transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+    .producto-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(212,175,55,0.4);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.3), 0 0 20px var(--glow-oro);
+    }
+    .producto-img {
+      aspect-ratio: 3/4; overflow: hidden; position: relative;
+    }
+    .producto-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
+    .producto-card:hover .producto-img img { transform: scale(1.05); }
+    .producto-badge {
+      position: absolute; top: 8px; left: 8px;
+      background: rgba(11,61,46,0.9); border: 1px solid var(--oro);
+      border-radius: 20px; padding: 3px 10px;
+      font-size: 0.6rem; font-weight: 700; color: var(--oro);
+      text-transform: uppercase; letter-spacing: 0.1em;
+    }
+    .cuadros-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+    }
+    .cuadro-card {
+      background: rgba(11,61,46,0.7);
+      border: 1px solid rgba(212,175,55,0.15);
+      border-radius: 14px; overflow: hidden;
+      transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+    }
+    .cuadro-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(212,175,55,0.4);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.3), 0 0 20px var(--glow-oro);
+    }
+    .cuadro-img { aspect-ratio: 4/3; overflow: hidden; }
+    .cuadro-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
+    .cuadro-card:hover .cuadro-img img { transform: scale(1.05); }
+    .cuadro-info, .producto-info {
+      padding: 12px 14px;
+    }
+    .cuadro-cat, .producto-cat {
+      font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.12em;
+      color: var(--oro); margin-bottom: 4px;
+    }
+    .cuadro-name, .producto-name {
+      font-size: 0.8rem; font-weight: 600; color: var(--marfil);
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .productos-cta-wrap { text-align: center; margin-top: 20px; }
+    .btn-tienda {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: linear-gradient(135deg, var(--oro), var(--oro-light));
+      color: var(--verde); font-family: 'Montserrat', sans-serif;
+      font-size: 0.85rem; font-weight: 800; letter-spacing: 0.12em;
+      text-transform: uppercase; padding: 16px 40px; border-radius: 50px;
+      text-decoration: none; transition: all 0.3s;
+      box-shadow: 0 6px 24px rgba(212,175,55,0.3);
+    }
+    .btn-tienda:hover { transform: translateY(-3px); box-shadow: 0 10px 36px rgba(212,175,55,0.45); }
+
+    @media (max-width: 900px) {
+      .productos-layout { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .productos-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    /* Gold line divider */
+    .gold-divider {
+      width: 60px; height: 2px;
+      background: linear-gradient(90deg, transparent, var(--oro), transparent);
+      margin: 20px 0;
+    }
+    .gold-divider-center { margin: 20px auto; }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <a href="#hero" class="nav-logo">
+      <img src="assets/isotipo-charco-web.png" alt="Yo Soy Charco" />
+      <span class="nav-brand">YO SOY C.H.A.R.C.O.</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#charco">El Sistema</a></li>
+      <li><a href="#negocio">Negocios</a></li>
+      <li><a href="#productos">Tienda</a></li>
+      <li><a href="#metricas">Resultados</a></li>
+      <li><a href="#contacto" class="nav-cta">Conectar</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-particles"></div>
+    <div class="hero-inner">
+
+      <!-- IG Card -->
+      <div class="ig-card reveal">
+        <div class="ig-card-header">
+          <div class="ig-avatar-wrap">
+            <div class="ig-avatar-ring"></div>
+            <div class="ig-avatar-inner">
+              <img src="assets/hernan-perfil.jpg" alt="Hernán Venegas Lagos" onerror="this.src='assets/instagram/profile.jpg'" />
+            </div>
+          </div>
+          <div class="ig-name-block">
+            <div class="ig-name">
+              Hernán A. Venegas Lagos
+              <span class="ig-verified">
+                <svg viewBox="0 0 24 24" fill="white"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              </span>
+            </div>
+            <a class="ig-handle" href="https://www.instagram.com/hernanalejandrovenegaslagos" target="_blank" rel="noopener">
+              @hernanalejandrovenegaslagos
+            </a>
+            <div class="ig-category">Ingeniería de Vida · Plottier, Neuquén</div>
+          </div>
+        </div>
+
+        <div class="ig-stats">
+          <div class="ig-stat">
+            <span class="ig-stat-num">18</span>
+            <span class="ig-stat-label">Frontales Calificados</span>
+          </div>
+          <div class="ig-stat" style="display:flex;flex-direction:column;align-items:center;justify-content:center;">
+            <span class="ig-stat-num" style="font-size:0.72rem;line-height:1.3;">👑</span>
+            <span class="ig-stat-label">Embajador Corona</span>
+          </div>
+          <div class="ig-stat">
+            <span class="ig-stat-num" style="font-size:0.78rem;line-height:1.3;">Plottier</span>
+            <span class="ig-stat-label">Neuquén, Argentina</span>
+          </div>
+        </div>
+
+        <p class="ig-bio">
+          Mentor de vida integral. Conciencia · Hábitos · Acción · Resultados · Coherencia · Oportunidad.<br/>
+          <em>"Salud, Mente y Libertad para el líder moderno."</em>
+        </p>
+
+        <div class="ig-btns">
+          <a class="ig-btn ig-btn-primary" href="https://www.instagram.com/hernanalejandrovenegaslagos" target="_blank" rel="noopener">Seguir en IG</a>
+          <a class="ig-btn ig-btn-secondary" href="https://wa.me/5492996335329" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="ig-btn ig-btn-secondary" href="#contacto">Contactar</a>
+        </div>
+
+        <p class="ig-grid-label">Mente · Cuerpo · Libertad</p>
+        <div class="ig-grid">
+
+          <!-- Foto: portrait recortado al rostro -->
+          <div class="ig-grid-cell">
+            <img src="assets/hernan-perfil.jpg" alt="Hernán Venegas Lagos"
+              style="object-fit:cover;width:100%;height:100%;object-position:center 15%;" />
+          </div>
+
+          <!-- Pilar 1: LIBROS / Charco Libro -->
+          <div class="ig-grid-cell ig-card-pilar" style="background:linear-gradient(145deg,#0B3D2E,#0e4d3a);">
+            <div class="ig-pilar-inner">
+              <span class="ig-pilar-icon">📚</span>
+              <span class="ig-pilar-title">LIBROS</span>
+              <span class="ig-pilar-sub">Charco Libros</span>
+            </div>
+          </div>
+
+          <!-- Foto: upper body -->
+          <div class="ig-grid-cell">
+            <img src="assets/hernan-perfil.jpg" alt="Hernán Venegas Lagos"
+              style="object-fit:cover;width:100%;height:100%;object-position:center 30%;transform:scale(1.12);" />
+          </div>
+
+          <!-- Pilar 2: SALUD / Amway -->
+          <div class="ig-grid-cell ig-card-pilar" style="background:linear-gradient(145deg,#0a3020,#0F5C6E55,#0a2a1e);">
+            <div class="ig-pilar-inner">
+              <span class="ig-pilar-icon">🌿</span>
+              <span class="ig-pilar-title">SALUD</span>
+              <span class="ig-pilar-sub">Amway</span>
+            </div>
+          </div>
+
+          <!-- Pilar 3: SISTEMA / Red -->
+          <div class="ig-grid-cell ig-card-pilar" style="background:linear-gradient(145deg,#071e14,#0B3D2E);">
+            <div class="ig-pilar-inner">
+              <img src="assets/isotipo-charco-web.png" alt="Sistema" style="width:36px;height:36px;object-fit:contain;filter:drop-shadow(0 0 6px rgba(212,175,55,.6));margin-bottom:4px;" />
+              <span class="ig-pilar-title" style="font-size:0.58rem;">SISTEMA</span>
+              <span class="ig-pilar-sub">Red de Socios</span>
+            </div>
+          </div>
+
+          <!-- Foto: full portrait -->
+          <div class="ig-grid-cell">
+            <img src="assets/hernan-perfil.jpg" alt="Hernán Venegas Lagos"
+              style="object-fit:cover;width:100%;height:100%;object-position:center 45%;" />
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Hero Text -->
+      <div class="hero-text">
+        <div class="hero-eyebrow reveal">Ingeniería de Vida</div>
+        <h1 class="hero-h1 reveal reveal-delay-1">
+          <span class="italic gold">Yo Soy</span><br/>
+          C.H.A.R.C.O.
+        </h1>
+        <div class="hero-charco-badge reveal reveal-delay-2">
+          <img src="assets/isotipo-charco-web.png" alt="" style="height:20px;" />
+          Ingeniería de Vida
+        </div>
+        <p class="hero-sub reveal reveal-delay-2">
+          Salud, Mente y Libertad para el líder moderno.<br/>
+          Sistemas que trabajan por vos mientras recuperás lo que más importa: <strong>tu tiempo y tu familia</strong>.
+        </p>
+        <div class="hero-community reveal reveal-delay-3">
+          <div>
+            <div style="font-size:0.72rem;font-weight:800;text-transform:uppercase;letter-spacing:0.12em;color:var(--oro);line-height:1.2;">Sistema<br/>Probado</div>
+          </div>
+          <div class="hero-divider"></div>
+          <div>
+            <div style="font-size:0.72rem;font-weight:800;text-transform:uppercase;letter-spacing:0.12em;color:var(--oro);line-height:1.2;">Mentoría<br/>Real</div>
+          </div>
+          <div class="hero-divider"></div>
+          <div>
+            <div style="font-size:0.72rem;font-weight:800;text-transform:uppercase;letter-spacing:0.12em;color:var(--oro);line-height:1.2;">Resultados<br/>Medibles</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CHARCO / SOBRE MÍ -->
+  <section id="charco">
+    <div class="section-inner">
+      <div class="charco-grid">
+        <div>
+          <div class="section-tag reveal">El Sistema</div>
+          <h2 class="section-title reveal reveal-delay-1">
+            ¿Qué significa<br/><span class="italic gold">C.H.A.R.C.O.</span>?
+          </h2>
+          <p class="charco-intro reveal reveal-delay-2">
+            C.H.A.R.C.O. no es una marca. Es el camino que recorrí para dejar de correr detrás de todo y empezar a construir algo que trabaja por mí.<br/><br/>
+            Cada letra es un paso real. Aplicado en orden, genera <strong>el efecto charco</strong>: una onda que se expande sola desde tu salud hasta tu negocio, y de ahí a tu familia.
+          </p>
+
+          <div class="charco-acronym">
+            <div class="acronym-row reveal reveal-delay-1">
+              <span class="acronym-letter">C</span>
+              <div class="acronym-content">
+                <div class="acronym-word">Conciencia</div>
+                <div class="acronym-desc">Despertar mental · Libros · Programación interna</div>
+              </div>
+            </div>
+            <div class="acronym-row reveal reveal-delay-2">
+              <span class="acronym-letter">H</span>
+              <div class="acronym-content">
+                <div class="acronym-word">Hábitos</div>
+                <div class="acronym-desc">Salud · Rutinas diarias · Nutrición funcional</div>
+              </div>
+            </div>
+            <div class="acronym-row reveal reveal-delay-3">
+              <span class="acronym-letter">A</span>
+              <div class="acronym-content">
+                <div class="acronym-word">Acción</div>
+                <div class="acronym-desc">Ejecución consistente · Disciplina sin excusas</div>
+              </div>
+            </div>
+            <div class="acronym-row reveal reveal-delay-4">
+              <span class="acronym-letter">R</span>
+              <div class="acronym-content">
+                <div class="acronym-word">Resultados</div>
+                <div class="acronym-desc">Materialización financiera · Evidencia tangible</div>
+              </div>
+            </div>
+            <div class="acronym-row reveal reveal-delay-5">
+              <span class="acronym-letter">C</span>
+              <div class="acronym-content">
+                <div class="acronym-word">Congruencia</div>
+                <div class="acronym-desc">Lo que decís = lo que vivís. Sin doble discurso</div>
+              </div>
+            </div>
+            <div class="acronym-row reveal">
+              <span class="acronym-letter">O</span>
+              <div class="acronym-content">
+                <div class="acronym-word">Oportunidad</div>
+                <div class="acronym-desc">El sistema que genera libertad de tiempo y soberanía</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="charco-right reveal reveal-delay-2">
+          <div class="charco-image-wrap">
+            <img src="assets/hernan-perfil.jpg" alt="Hernán Venegas Lagos" />
+            <div class="charco-image-overlay"></div>
+            <div class="charco-badge-float">
+              <div class="quote">"El negocio no es el fin. Es el medio para recuperar lo que más importa."</div>
+              <div class="author">— Hernán A. Venegas Lagos</div>
+            </div>
+          </div>
+          <div style="margin-top:28px; padding:24px; background:rgba(11,61,46,0.6); border:1px solid rgba(212,175,55,0.2); border-radius:16px;">
+            <div style="font-size:0.72rem; text-transform:uppercase; letter-spacing:0.15em; color:var(--oro); margin-bottom:12px;">Historia de origen</div>
+            <p style="font-size:0.85rem; line-height:1.7; color:var(--texto-muted);">
+              Tenía 4.600 contactos y estaba agotado. Perseguía a cada cliente, iba al correo por márgenes mínimos, no veía a mi hijo desayunar.<br/><br/>
+              En algún punto me pregunté para qué estaba haciendo todo esto. Y la respuesta fue: el <strong style="color:var(--oro);">tiempo</strong>. Eso es lo que quería recuperar.<br/><br/>
+              Ahí nació C.H.A.R.C.O. Un sistema que une al padre, al empresario y al vendedor en una sola estructura que funciona sola.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEGOCIO -->
+  <section id="negocio">
+    <div class="section-inner">
+      <div class="negocio-header">
+        <div class="section-tag reveal" style="justify-content:center;">El Ecosistema</div>
+        <h2 class="section-title reveal reveal-delay-1" style="text-align:center;">
+          Un sistema de <span class="italic gold">tres vehículos</span>,<br/>un solo destino: tu libertad
+        </h2>
+        <p style="text-align:center;font-size:0.9rem;color:var(--texto-muted);max-width:560px;margin:0 auto 16px;" class="reveal reveal-delay-2">
+          Tres vehículos. Uno solo no alcanza, los tres juntos se multiplican. El libro abre la puerta, Amway genera el ingreso recurrente, la red construye la libertad.
+        </p>
+        <div class="gold-divider gold-divider-center"></div>
+      </div>
+
+      <!-- Flecha del flujo -->
+      <div class="ecosistema-flujo reveal">
+        <div class="flujo-step">
+          <div class="flujo-num">01</div>
+          <div class="flujo-label">Gancho</div>
+        </div>
+        <div class="flujo-arrow">→</div>
+        <div class="flujo-step">
+          <div class="flujo-num">02</div>
+          <div class="flujo-label">Rentabilidad</div>
+        </div>
+        <div class="flujo-arrow">→</div>
+        <div class="flujo-step">
+          <div class="flujo-num">03</div>
+          <div class="flujo-label">Libertad</div>
+        </div>
+      </div>
+
+      <div class="negocio-grid">
+        <div class="negocio-card reveal reveal-delay-1">
+          <div class="negocio-card-header" style="background:linear-gradient(135deg,rgba(212,175,55,0.12),transparent);">
+            <span class="negocio-step">Front-End · Gancho</span>
+            <span class="negocio-icon">📚</span>
+            <div class="negocio-title">Charco Libros</div>
+            <div style="font-size:0.72rem;color:var(--petroleo);font-weight:600;margin-top:-8px;margin-bottom:12px;letter-spacing:0.05em;">charcolibros.empretienda.com.ar</div>
+          </div>
+          <p class="negocio-desc">Libros nuevos y usados. Liderazgo, finanzas, mentalidad, cultura general. El que compra un libro ya entró al sistema — aunque todavía no lo sepa.</p>
+          <ul class="negocio-items">
+            <li>Liderazgo y gestión de equipos</li>
+            <li>Finanzas personales y libertad</li>
+            <li>Mentalidad y reprogramación</li>
+            <li>Cultura General · Historia · Arte</li>
+            <li>Cuadros originales de autor</li>
+          </ul>
+          <a href="https://charcolibros.empretienda.com.ar" target="_blank" rel="noopener"
+            style="display:inline-block;margin-top:16px;padding:10px 18px;background:rgba(212,175,55,0.12);border:1px solid rgba(212,175,55,0.3);border-radius:8px;font-size:0.73rem;font-weight:700;color:var(--oro);text-decoration:none;letter-spacing:0.08em;transition:all 0.25s;"
+            onmouseover="this.style.background='rgba(212,175,55,0.2)'" onmouseout="this.style.background='rgba(212,175,55,0.12)'">
+            Ver tienda →
+          </a>
+        </div>
+
+        <div class="negocio-card reveal reveal-delay-2">
+          <div class="negocio-card-header" style="background:linear-gradient(135deg,rgba(15,92,110,0.15),transparent);">
+            <span class="negocio-step">Back-End · Rentabilidad</span>
+            <span class="negocio-icon">🌿</span>
+            <div class="negocio-title">Amway — Salud, Bienestar y Medio Ambiente</div>
+            <div style="font-size:0.72rem;color:rgba(212,175,55,0.7);font-weight:600;margin-top:-8px;margin-bottom:12px;letter-spacing:0.05em;">Salud · Bienestar · Medio Ambiente</div>
+          </div>
+          <p class="negocio-desc">Lo que Hernán usa en su propia casa. Nutrición funcional y productos ecológicos de Amway. El cliente recompra cada mes — sin que vos tengas que salir a buscarlo.</p>
+          <ul class="negocio-items">
+            <li>Suplementos y nutrición funcional</li>
+            <li>Productos de hogar ecológicos</li>
+            <li>Envío directo de la multinacional</li>
+            <li>Recompra mensual garantizada</li>
+            <li>Ingresos pasivos con stock apalancado</li>
+          </ul>
+          <a href="https://www.amway.com.ar/Amway.Page/ThePage.aspx?Tienda=AlejandroHernanLagosVenegas" target="_blank" rel="noopener"
+            style="display:inline-block;margin-top:16px;padding:10px 18px;background:rgba(212,175,55,0.12);border:1px solid rgba(212,175,55,0.3);border-radius:8px;font-size:0.73rem;font-weight:700;color:var(--oro);text-decoration:none;letter-spacing:0.08em;transition:all 0.25s;"
+            onmouseover="this.style.background='rgba(212,175,55,0.2)'" onmouseout="this.style.background='rgba(212,175,55,0.12)'">
+            Ver tienda →
+          </a>
+        </div>
+
+        <div class="negocio-card reveal reveal-delay-3">
+          <div class="negocio-card-header" style="background:linear-gradient(135deg,rgba(212,175,55,0.08),transparent);">
+            <span class="negocio-step">High-Ticket · Libertad</span>
+            <span class="negocio-icon">🌎</span>
+            <div class="negocio-title">Red de Socios</div>
+            <div style="font-size:0.72rem;color:rgba(212,175,55,0.7);font-weight:600;margin-top:-8px;margin-bottom:12px;letter-spacing:0.05em;">Sistema · Equipo · Ingresos Residuales</div>
+          </div>
+          <p class="negocio-desc">El nivel que cambia todo. Construís tu red de distribución y cada socio que entra multiplica lo que ya tenés construido. Vos no trabajás el doble — el sistema sí.</p>
+          <ul class="negocio-items">
+            <li>Mentoría directa de Hernán</li>
+            <li>Sistema probado de mercadeo en red</li>
+            <li>Ingresos residuales reales</li>
+            <li>Construís tu equipo propio</li>
+            <li>Sin límite de escala</li>
+          </ul>
+          <a href="https://wa.me/5492996335329" target="_blank" rel="noopener"
+            style="display:block;margin-top:16px;padding:14px 18px;background:linear-gradient(135deg,rgba(212,175,55,0.15),rgba(212,175,55,0.08));border:1px solid rgba(212,175,55,0.35);border-radius:8px;text-align:center;text-decoration:none;transition:all 0.25s;"
+            onmouseover="this.style.background='rgba(212,175,55,0.22)'" onmouseout="this.style.background='linear-gradient(135deg,rgba(212,175,55,0.15),rgba(212,175,55,0.08))'">
+            <div style="font-size:0.78rem;font-weight:800;color:var(--oro);letter-spacing:0.08em;text-transform:uppercase;">Contactame y te cuento cómo se hace →</div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Resumen del flujo en palabras -->
+      <div class="ecosistema-resumen reveal" style="margin-top:48px;">
+        <div class="resumen-item">
+          <span class="resumen-icon">📚</span>
+          <div>
+            <div class="resumen-title">Libro en mano</div>
+            <div class="resumen-desc">El cliente entra por el conocimiento</div>
+          </div>
+        </div>
+        <div class="resumen-flecha">→</div>
+        <div class="resumen-item">
+          <span class="resumen-icon">🌿</span>
+          <div>
+            <div class="resumen-title">Salud en el cuerpo</div>
+            <div class="resumen-desc">Se convierte en cliente de salud</div>
+          </div>
+        </div>
+        <div class="resumen-flecha">→</div>
+        <div class="resumen-item">
+          <span class="resumen-icon">🌎</span>
+          <div>
+            <div class="resumen-title">Sistema en marcha</div>
+            <div class="resumen-desc">Decide construir su propia libertad</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- VIDEO PLAN -->
+  <section id="video-plan" style="padding:80px 0;background:linear-gradient(180deg,rgba(11,61,46,0.0),rgba(11,61,46,0.4),rgba(11,61,46,0.0));">
+    <div class="section-inner">
+      <div style="text-align:center;margin-bottom:40px;">
+        <div class="section-tag reveal" style="justify-content:center;">El Plan Completo</div>
+        <h2 class="section-title reveal reveal-delay-1" style="text-align:center;">
+          Escuchá el sistema<br/><span class="italic gold">de la voz de Hernán</span>
+        </h2>
+        <p style="font-size:0.88rem;color:var(--texto-muted);max-width:520px;margin:16px auto 0;line-height:1.7;" class="reveal reveal-delay-2">
+          Una hora donde Hernán explica el plan sin filtros: cómo funciona cada vehículo, cómo empezar y qué esperar en el camino.
+        </p>
+        <div class="gold-divider gold-divider-center"></div>
+      </div>
+
+      <!-- VIDEO_PLACEHOLDER: reemplazar este bloque con el iframe de YouTube cuando Hernán suba el video -->
+      <div class="reveal reveal-delay-2" style="max-width:800px;margin:0 auto;">
+        <div style="position:relative;border-radius:16px;overflow:hidden;border:1px solid rgba(212,175,55,0.25);box-shadow:0 20px 60px rgba(0,0,0,0.5);aspect-ratio:16/9;background:rgba(11,61,46,0.8);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;padding:40px;">
+          <div style="width:64px;height:64px;border:2px solid rgba(212,175,55,0.4);border-radius:50%;display:flex;align-items:center;justify-content:center;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M8 5v14l11-7L8 5z" fill="rgba(212,175,55,0.6)"/></svg>
+          </div>
+          <div style="text-align:center;">
+            <div style="font-size:0.9rem;font-weight:700;color:var(--oro);margin-bottom:8px;letter-spacing:0.05em;">Video disponible próximamente</div>
+            <div style="font-size:0.78rem;color:var(--texto-muted);line-height:1.6;">Mientras tanto, escribime por WhatsApp<br/>y te cuento el plan en detalle.</div>
+          </div>
+          <a href="https://wa.me/5492996335329" target="_blank" rel="noopener"
+            style="padding:12px 24px;background:rgba(212,175,55,0.12);border:1px solid rgba(212,175,55,0.35);border-radius:8px;font-size:0.75rem;font-weight:700;color:var(--oro);text-decoration:none;letter-spacing:0.08em;">
+            Escribime por WhatsApp →
+          </a>
+        </div>
+        <div style="margin-top:16px;display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap;">
+          <span style="font-size:0.73rem;color:var(--texto-muted);letter-spacing:0.08em;">⏱ 1 hora · Plan completo</span>
+          <span style="font-size:0.73rem;color:var(--texto-muted);">·</span>
+          <a href="https://wa.me/5492996335329" target="_blank" rel="noopener" style="font-size:0.73rem;font-weight:700;color:var(--oro);text-decoration:none;letter-spacing:0.08em;">¿Tenés preguntas? Escribime →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTOS -->
+  <section id="productos">
+    <div class="section-inner">
+      <div class="productos-header">
+        <div class="section-tag reveal" style="justify-content:center;">La Tienda</div>
+        <h2 class="section-title reveal reveal-delay-1" style="text-align:center;">
+          Libros, Cuadros y <span class="italic gold">Sistemas de Vida</span>
+        </h2>
+        <p style="text-align:center; font-size:0.9rem; color:var(--texto-muted); max-width:600px; margin:0 auto 40px;" class="reveal reveal-delay-2">
+          Todo lo que encontrás en Charco Libros tiene una intención: expandir tu mente, nutrir tu cuerpo y construir tu libertad.
+        </p>
+        <div class="gold-divider gold-divider-center"></div>
+      </div>
+
+      <!-- Banner sistema — full width -->
+      <a href="https://charcolibros.empretienda.com.ar" target="_blank" rel="noopener" class="banner-sistema reveal reveal-delay-1" style="margin-bottom:40px;">
+        <img src="assets/tienda/banner-4.jpg" alt="Más que libros, un sistema — Charco Libros" />
+        <div class="banner-sistema-cta">
+          <span>Ir a la tienda completa</span>
+          <span class="arrow">→</span>
+        </div>
+      </a>
+
+      <div class="productos-layout">
+        <!-- Libros destacados -->
+        <div>
+          <div style="font-size:0.72rem; text-transform:uppercase; letter-spacing:0.18em; color:var(--oro); margin-bottom:20px;" class="reveal">📚 Libros Disponibles</div>
+          <div class="productos-grid">
+            <div class="producto-card reveal reveal-delay-1">
+              <div class="producto-img">
+                <img src="assets/tienda/prod-06.jpg" alt="Latitudes" />
+                <span class="producto-badge">Nuevo</span>
+              </div>
+              <div class="producto-info">
+                <div class="producto-cat">Literatura</div>
+                <div class="producto-name">Latitudes</div>
+              </div>
+            </div>
+            <div class="producto-card reveal reveal-delay-2">
+              <div class="producto-img">
+                <img src="assets/tienda/prod-08.jpg" alt="Signos" />
+                <span class="producto-badge">Disponible</span>
+              </div>
+              <div class="producto-info">
+                <div class="producto-cat">Narrativa</div>
+                <div class="producto-name">Signos</div>
+              </div>
+            </div>
+            <div class="producto-card reveal reveal-delay-3">
+              <div class="producto-img">
+                <img src="assets/tienda/prod-09.jpg" alt="El Aviso" />
+                <span class="producto-badge">Disponible</span>
+              </div>
+              <div class="producto-info">
+                <div class="producto-cat">Ficción</div>
+                <div class="producto-name">El Aviso</div>
+              </div>
+            </div>
+            <div class="producto-card reveal reveal-delay-1">
+              <div class="producto-img">
+                <img src="assets/tienda/prod-10.jpg" alt="Humberto Ligaluppi" />
+                <span class="producto-badge">Biografía</span>
+              </div>
+              <div class="producto-info">
+                <div class="producto-cat">Historia</div>
+                <div class="producto-name">H.A. Ligaluppi</div>
+              </div>
+            </div>
+            <div class="producto-card reveal reveal-delay-2">
+              <div class="producto-img">
+                <img src="assets/tienda/prod-05.jpg" alt="Los Cuentos de Tina" />
+                <span class="producto-badge">Infantil</span>
+              </div>
+              <div class="producto-info">
+                <div class="producto-cat">Infantil</div>
+                <div class="producto-name">Cuentos de Tina</div>
+              </div>
+            </div>
+            <div class="producto-card reveal reveal-delay-3">
+              <div class="producto-img">
+                <img src="assets/tienda/prod-12.jpg" alt="Poéticas del Sur" />
+                <span class="producto-badge">Poesía</span>
+              </div>
+              <div class="producto-info">
+                <div class="producto-cat">Antología</div>
+                <div class="producto-name">Poéticas del Sur</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cuadros Originales -->
+        <div>
+          <div style="font-size:0.72rem; text-transform:uppercase; letter-spacing:0.18em; color:var(--oro); margin-bottom:20px;" class="reveal">🎨 Cuadros Originales</div>
+          <div class="cuadros-grid">
+            <div class="cuadro-card reveal reveal-delay-1">
+              <div class="cuadro-img">
+                <img src="assets/tienda/prod-03.jpg" alt="Mariposa en el agua — el charco" />
+              </div>
+              <div class="cuadro-info">
+                <div class="cuadro-cat">Arte Original</div>
+                <div class="cuadro-name">El Charco</div>
+              </div>
+            </div>
+            <div class="cuadro-card reveal reveal-delay-2">
+              <div class="cuadro-img">
+                <img src="assets/tienda/prod-02.jpg" alt="Manzana vida — salud" />
+              </div>
+              <div class="cuadro-info">
+                <div class="cuadro-cat">Arte Original</div>
+                <div class="cuadro-name">Vida Natural</div>
+              </div>
+            </div>
+            <div class="cuadro-card reveal reveal-delay-3">
+              <div class="cuadro-img">
+                <img src="assets/tienda/prod-01.jpg" alt="Figura femenina" />
+              </div>
+              <div class="cuadro-info">
+                <div class="cuadro-cat">Arte Original</div>
+                <div class="cuadro-name">Movimiento</div>
+              </div>
+            </div>
+            <div class="cuadro-card reveal reveal-delay-4">
+              <div class="cuadro-img">
+                <img src="assets/tienda/prod-04.jpg" alt="Mente colorida" />
+              </div>
+              <div class="cuadro-info">
+                <div class="cuadro-cat">Arte Original</div>
+                <div class="cuadro-name">Conciencia</div>
+              </div>
+            </div>
+          </div>
+          <!-- Precios info -->
+          <div style="margin-top:20px; padding:18px 20px; background:rgba(212,175,55,0.07); border:1px solid rgba(212,175,55,0.2); border-radius:12px;" class="reveal reveal-delay-3">
+            <div style="font-size:0.72rem; color:var(--oro); font-weight:700; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:10px;">Condiciones de compra</div>
+            <div style="font-size:0.78rem; color:var(--texto-muted); line-height:1.8;">
+              💳 3 cuotas sin interés con tarjeta<br/>
+              💸 15% OFF — transferencia, efectivo o crypto<br/>
+              🚚 Envío GRATIS en Plottier y Neuquén Capital<br/>
+              📦 Envíos nacionales por Correo Argentino
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="productos-cta-wrap reveal">
+        <a href="https://charcolibros.empretienda.com.ar" target="_blank" rel="noopener" class="btn-tienda">
+          <span>Ver catálogo completo</span>
+          <span>→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- METRICS -->
+  <section id="metricas">
+    <div class="section-inner">
+      <div class="metricas-header">
+        <div class="section-tag reveal" style="justify-content:center;">El Sistema</div>
+        <h2 class="section-title reveal reveal-delay-1" style="text-align:center;">
+          El sistema <span class="italic gold">en acción</span>
+        </h2>
+        <div class="gold-divider gold-divider-center"></div>
+      </div>
+
+      <div class="metricas-grid">
+        <div class="metrica-card reveal reveal-delay-1">
+          <span class="metrica-num" data-target="3">0</span>
+          <span class="metrica-label">Líneas de Negocio</span>
+        </div>
+        <div class="metrica-card reveal reveal-delay-2">
+          <span class="metrica-num">∞</span>
+          <span class="metrica-label">Potencial de Red</span>
+        </div>
+        <div class="metrica-card reveal reveal-delay-3">
+          <span class="metrica-num">∞</span>
+          <span class="metrica-label">Potencial de Ventas</span>
+        </div>
+        <div class="metrica-card reveal reveal-delay-4">
+          <span class="metrica-num">0</span>
+          <span class="metrica-label">Límite de Escala</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIO -->
+  <section id="testimonio">
+    <div class="section-inner">
+      <div class="testimonio-wrap">
+        <span class="testimonio-marks">"</span>
+        <p class="testimonio-text reveal">
+          "Con la guía, asesoramiento y conocimientos de Hernán, estamos creando y dando los pasos en orden para crecer en el mundo digital. Lo primero fue tener un orden personal en el accionar diario. Le diría a alguien que duda: confiar en sus conocimientos es dejarse guiar, aprendés y aplicás rápido."
+        </p>
+        <div class="testimonio-author reveal reveal-delay-1">
+          <div class="testimonio-avatar">
+            <img src="assets/hernan-perfil.jpg" alt="Cliente YO SOY CHARCO" />
+          </div>
+          <div class="testimonio-name-block">
+            <div class="testimonio-name">Socio del sistema</div>
+            <div class="testimonio-role">Red Yo Soy C.H.A.R.C.O. — Neuquén</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAGOS Y LOGÍSTICA -->
+  <section id="pagos">
+    <div class="section-inner">
+      <div class="pagos-header">
+        <div class="section-tag reveal" style="justify-content:center;">Logística y Pagos</div>
+        <h2 class="section-title reveal reveal-delay-1" style="text-align:center;">
+          Fácil y <span class="italic gold">sin complicaciones</span>
+        </h2>
+        <div class="gold-divider gold-divider-center"></div>
+      </div>
+
+      <div class="pagos-grid">
+        <div class="pago-card reveal reveal-delay-1">
+          <span class="pago-icon">💳</span>
+          <div>
+            <div class="pago-title">3 cuotas sin interés</div>
+            <div class="pago-desc">Pagá con tarjeta de crédito en <span class="pago-highlight">3 cuotas sin interés</span>. Sin sorpresas, sin recargos.</div>
+          </div>
+        </div>
+        <div class="pago-card reveal reveal-delay-2">
+          <span class="pago-icon">💸</span>
+          <div>
+            <div class="pago-title">15% OFF al contado</div>
+            <div class="pago-desc">Transferencia, efectivo o crypto. <span class="pago-highlight">Descuento del 15%</span> en todos los productos.</div>
+          </div>
+        </div>
+        <div class="pago-card reveal reveal-delay-3">
+          <span class="pago-icon">🚚</span>
+          <div>
+            <div class="pago-title">Envío GRATIS en Plottier</div>
+            <div class="pago-desc">Envío gratuito en <span class="pago-highlight">Plottier y Neuquén Capital</span>. Punto de retiro: Zampa 2560, Plottier.</div>
+          </div>
+        </div>
+        <div class="pago-card reveal reveal-delay-4">
+          <span class="pago-icon">📦</span>
+          <div>
+            <div class="pago-title">Envío nacional</div>
+            <div class="pago-desc">Para el resto del país via <span class="pago-highlight">Correo Argentino</span>. Amway hace envío directo a tu puerta.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto">
+    <div class="section-inner">
+      <div class="contacto-inner">
+        <div>
+          <div class="section-tag reveal">Conectar</div>
+          <h2 class="section-title reveal reveal-delay-1">
+            ¿Listo para<br/><span class="italic gold">empezar tu sistema</span>?
+          </h2>
+          <div class="gold-divider"></div>
+          <p style="font-size:0.9rem; color:var(--texto-muted); line-height:1.7; margin-bottom:32px;" class="reveal reveal-delay-2">
+            Conectá con Hernán directamente. Sin filtros, sin bots. Si estás listo para construir tu sistema de salud, mente y libertad, este es el primer paso.
+          </p>
+
+          <div class="contacto-links">
+            <a href="https://wa.me/5492996335329" class="contacto-link reveal reveal-delay-2" target="_blank" rel="noopener">
+              <span class="contacto-link-icon">💬</span>
+              <div>
+                <div class="contacto-link-label">WhatsApp directo</div>
+                <div class="contacto-link-value">+54 9 299 633-5329</div>
+              </div>
+            </a>
+            <a href="https://www.instagram.com/hernanalejandrovenegaslagos" class="contacto-link reveal reveal-delay-3" target="_blank" rel="noopener">
+              <span class="contacto-link-icon">📸</span>
+              <div>
+                <div class="contacto-link-label">Instagram</div>
+                <div class="contacto-link-value">@hernanalejandrovenegaslagos</div>
+              </div>
+            </a>
+            <div class="contacto-link reveal reveal-delay-4" style="cursor:default;">
+              <span class="contacto-link-icon">📍</span>
+              <div>
+                <div class="contacto-link-label">Punto de retiro</div>
+                <div class="contacto-link-value">Zampa 2560, Plottier, Neuquén</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contacto-form reveal reveal-delay-2">
+          <div class="form-title">Enviame un mensaje</div>
+          <form onsubmit="handleForm(event)">
+            <div class="form-group">
+              <label>Nombre</label>
+              <input type="text" placeholder="Tu nombre completo" required />
+            </div>
+            <div class="form-group">
+              <label>WhatsApp / Email</label>
+              <input type="text" placeholder="¿Cómo te contacto?" required />
+            </div>
+            <div class="form-group">
+              <label>¿Qué te interesa?</label>
+              <select>
+                <option>Quiero comprar un libro</option>
+                <option>Me interesa Amway</option>
+                <option>Quiero ser socio del sistema</option>
+                <option>Quiero conocer más sobre C.H.A.R.C.O.</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Mensaje</label>
+              <textarea placeholder="Contame qué buscás..."></textarea>
+            </div>
+            <button type="submit" class="btn-enviar">Enviar mensaje →</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">
+      <img src="assets/logo-charco-web.png" alt="Yo Soy C.H.A.R.C.O." />
+    </div>
+    <p class="footer-tagline">"Salud, Mente y Libertad para el líder moderno."</p>
+    <div class="footer-redes">
+      <a href="https://www.instagram.com/hernanalejandrovenegaslagos" class="footer-red" target="_blank" rel="noopener" title="Instagram">📸</a>
+      <a href="https://wa.me/5492996335329" class="footer-red" target="_blank" rel="noopener" title="WhatsApp">💬</a>
+    </div>
+    <p class="footer-copy">© 2026 Yo Soy C.H.A.R.C.O. — Hernán A. Venegas Lagos · Plottier, Neuquén, Argentina</p>
+  </footer>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/5492996335329" class="wa-float" target="_blank" rel="noopener" title="WhatsApp">💬</a>
+
+  <script>
+    // Nav scroll
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // Reveal animation
+    const reveals = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.12 });
+    reveals.forEach(el => io.observe(el));
+
+    // Counter animation
+    function animateCounter(el, target, duration = 1500) {
+      const start = performance.now();
+      const update = (now) => {
+        const p = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.floor(eased * target).toLocaleString('es-AR');
+        if (p < 1) requestAnimationFrame(update);
+      };
+      requestAnimationFrame(update);
+    }
+
+    const counterIo = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          const target = parseInt(e.target.dataset.target);
+          if (!isNaN(target)) animateCounter(e.target, target);
+          counterIo.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    document.querySelectorAll('[data-target]').forEach(el => counterIo.observe(el));
+
+    // Parallax hero
+    window.addEventListener('scroll', () => {
+      const y = window.scrollY;
+      const heroParticles = document.querySelector('.hero-particles');
+      if (heroParticles) heroParticles.style.transform = `translateY(${y * 0.3}px)`;
+    }, { passive: true });
+
+    // Form handler
+    function handleForm(e) {
+      e.preventDefault();
+      const btn = e.target.querySelector('.btn-enviar');
+      btn.textContent = '✓ Mensaje enviado';
+      btn.style.background = '#2d7a4f';
+      setTimeout(() => {
+        btn.textContent = 'Enviar mensaje →';
+        btn.style.background = '';
+        e.target.reset();
+      }, 3000);
+    }
+  </script>
+</body>
+</html>
