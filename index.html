@@ -3,16 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yo Soy C.H.A.R.C.O. — Hernán A. Venegas Lagos</title>
-  <meta name="description" content="Ingeniería de Vida: Salud, Mente y Libertad para el líder moderno. Hernán A. Venegas Lagos — Yo Soy C.H.A.R.C.O." />
+  <title>Yo Soy C.H.A.R.C.O. — Hernán Alejandro Venegas Lagos</title>
+  <meta name="description" content="Ingeniería de Vida: Salud, Mente y Libertad para el líder moderno. Hernán Alejandro Venegas Lagos — Yo Soy C.H.A.R.C.O." />
   <!-- Open Graph -->
-  <meta property="og:title" content="Yo Soy C.H.A.R.C.O. — Hernán A. Venegas Lagos" />
+  <meta property="og:title" content="Yo Soy C.H.A.R.C.O. — Hernán Alejandro Venegas Lagos" />
   <meta property="og:description" content="Salud, Mente y Libertad para el líder moderno. Libros · Amway · Red de Socios — Plottier, Neuquén." />
   <meta property="og:image" content="https://yosoycharco.com/assets/hernan-perfil.jpg" />
   <meta property="og:url" content="https://yosoycharco.com" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Yo Soy C.H.A.R.C.O. — Hernán Alejandro Venegas Lagos" />
+  <meta name="twitter:description" content="Salud, Mente y Libertad para el líder moderno. Libros · Amway · Red de Socios — Plottier, Neuquén." />
+  <meta name="twitter:image" content="https://yosoycharco.com/assets/hernan-perfil.jpg" />
+  <meta name="theme-color" content="#0B3D2E" />
+  <link rel="canonical" href="https://yosoycharco.com" />
   <link rel="icon" type="image/png" href="assets/isotipo-charco-web.png" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Person","name":"Hernán Alejandro Venegas Lagos","jobTitle":"Mentor de Ingeniería de Vida","url":"https://yosoycharco.com","image":"https://yosoycharco.com/assets/hernan-perfil.jpg","sameAs":["https://www.instagram.com/hernanalejandrovenegaslagos"],"address":{"@type":"PostalAddress","addressLocality":"Plottier","addressRegion":"Neuquén","addressCountry":"AR"},"worksFor":{"@type":"Organization","name":"Yo Soy C.H.A.R.C.O."}}
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preload" as="image" href="assets/hernan-perfil.webp" fetchpriority="high" />
@@ -813,6 +821,24 @@
       margin: 20px 0;
     }
     .gold-divider-center { margin: 20px auto; }
+    /* ===== Sistema de color v1.3: verde base + negro (ritmo) + azul petróleo (acento) ===== */
+    :root { --negro:#06120e; --negro-2:#040b09; --petroleo-light:#1aa0bd; --petroleo-glow:rgba(26,160,189,0.28); }
+    #video-plan{ background:linear-gradient(180deg,var(--verde) 0%,var(--negro) 16%,var(--negro) 84%,var(--verde) 100%)!important; }
+    #productos{ background:var(--negro)!important; }
+    #contacto{ background:linear-gradient(180deg,var(--verde),var(--negro))!important; }
+    footer{ background:var(--negro-2)!important; }
+    #nav.scrolled{ background:rgba(6,18,14,0.92)!important; backdrop-filter:blur(10px); }
+    .acronym-row:nth-child(even) .acronym-letter{ color:var(--petroleo-light); }
+    .acronym-row:hover{ background:rgba(26,160,189,0.10); border-left:2px solid var(--petroleo-light); }
+    .gold-divider{ background:linear-gradient(90deg,transparent,var(--oro),var(--petroleo-light),transparent); }
+    .metricas-grid-3{ grid-template-columns:repeat(3,1fr)!important; max-width:760px; margin:0 auto; }
+    @media(max-width:640px){ .metricas-grid-3{ grid-template-columns:1fr!important; } }
+    .metrica-card{ border-color:rgba(26,160,189,0.22); }
+    .metrica-card:hover{ border-color:var(--petroleo-light); box-shadow:0 12px 40px var(--petroleo-glow); }
+    .metrica-card:nth-child(even) .metrica-num{ color:var(--petroleo-light); }
+    .producto-card{ transition:transform .3s, box-shadow .3s; }
+    .producto-card:hover{ transform:translateY(-6px); box-shadow:0 16px 40px rgba(0,0,0,0.55),0 0 0 1px var(--petroleo-glow); }
+    @media (prefers-reduced-motion:reduce){ *{ animation:none!important; transition:none!important; scroll-behavior:auto!important; } }
   </style>
 </head>
 <body>
@@ -844,12 +870,12 @@
           <div class="ig-avatar-wrap">
             <div class="ig-avatar-ring"></div>
             <div class="ig-avatar-inner">
-              <img src="assets/hernan-perfil.webp" alt="Hernán Venegas Lagos" onerror="this.src='assets/instagram/profile.jpg'" />
+              <img src="assets/hernan-perfil.webp" alt="Hernán Alejandro Venegas Lagos" onerror="this.src='assets/instagram/profile.jpg'" />
             </div>
           </div>
           <div class="ig-name-block">
             <div class="ig-name">
-              Hernán A. Venegas Lagos
+              Hernán Alejandro Venegas Lagos
               <span class="ig-verified">
                 <svg viewBox="0 0 24 24" fill="white"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
               </span>
@@ -877,7 +903,7 @@
         </div>
 
         <p class="ig-bio">
-          Mentor de vida integral. Conciencia · Hábitos · Acción · Resultados · Coherencia · Oportunidad.<br/>
+          Mentor de vida integral. Conciencia · Hábitos · Acción · Resultados · Congruencia · Oportunidad.<br/>
           <em>"Salud, Mente y Libertad para el líder moderno."</em>
         </p>
 
@@ -892,11 +918,11 @@
 
           <!-- Foto: portrait recortado al rostro -->
           <div class="ig-grid-cell">
-            <img src="assets/hernan-perfil.webp" alt="Hernán Venegas Lagos"
+            <img src="assets/hernan-perfil.webp" alt="Hernán Alejandro Venegas Lagos"
               style="object-fit:cover;width:100%;height:100%;object-position:center 15%;" />
           </div>
 
-          <!-- Pilar 1: LIBROS / Charco Libro -->
+          <!-- Pilar 1: LIBROS / Charco Libros -->
           <div class="ig-grid-cell ig-card-pilar" style="background:linear-gradient(145deg,#0B3D2E,#0e4d3a);">
             <div class="ig-pilar-inner">
               <span class="ig-pilar-icon">📚</span>
@@ -907,7 +933,7 @@
 
           <!-- Foto: upper body -->
           <div class="ig-grid-cell">
-            <img src="assets/hernan-perfil.webp" alt="Hernán Venegas Lagos"
+            <img src="assets/hernan-perfil.webp" alt="Hernán Alejandro Venegas Lagos"
               style="object-fit:cover;width:100%;height:100%;object-position:center 30%;transform:scale(1.12);" />
           </div>
 
@@ -916,7 +942,7 @@
             <div class="ig-pilar-inner">
               <span class="ig-pilar-icon">🌿</span>
               <span class="ig-pilar-title">SALUD</span>
-              <span class="ig-pilar-sub">Amway</span>
+              <span class="ig-pilar-sub">Bienestar y Medio Ambiente</span>
             </div>
           </div>
 
@@ -931,7 +957,7 @@
 
           <!-- Foto: full portrait -->
           <div class="ig-grid-cell">
-            <img src="assets/hernan-perfil.webp" alt="Hernán Venegas Lagos"
+            <img src="assets/hernan-perfil.webp" alt="Hernán Alejandro Venegas Lagos"
               style="object-fit:cover;width:100%;height:100%;object-position:center 45%;" />
           </div>
 
@@ -1033,11 +1059,11 @@
 
         <div class="charco-right reveal reveal-delay-2">
           <div class="charco-image-wrap">
-            <img src="assets/hernan-perfil.webp" alt="Hernán Venegas Lagos" />
+            <img src="assets/hernan-perfil.webp" alt="Hernán Alejandro Venegas Lagos" />
             <div class="charco-image-overlay"></div>
             <div class="charco-badge-float">
               <div class="quote">"El negocio no es el fin. Es el medio para recuperar lo que más importa."</div>
-              <div class="author">— Hernán A. Venegas Lagos</div>
+              <div class="author">— Hernán Alejandro Venegas Lagos</div>
             </div>
           </div>
           <div style="margin-top:28px; padding:24px; background:rgba(11,61,46,0.6); border:1px solid rgba(212,175,55,0.2); border-radius:16px;">
@@ -1466,29 +1492,25 @@
   <section id="metricas">
     <div class="section-inner">
       <div class="metricas-header">
-        <div class="section-tag reveal" style="justify-content:center;">El Sistema</div>
+        <div class="section-tag reveal" style="justify-content:center;">El Potencial</div>
         <h2 class="section-title reveal reveal-delay-1" style="text-align:center;">
           El sistema <span class="italic gold">en acción</span>
         </h2>
         <div class="gold-divider gold-divider-center"></div>
       </div>
 
-      <div class="metricas-grid">
+      <div class="metricas-grid metricas-grid-3">
         <div class="metrica-card reveal reveal-delay-1">
-          <span class="metrica-num" data-target="3">0</span>
-          <span class="metrica-label">Líneas de Negocio</span>
-        </div>
-        <div class="metrica-card reveal reveal-delay-2">
           <span class="metrica-num">∞</span>
           <span class="metrica-label">Potencial de Red</span>
         </div>
-        <div class="metrica-card reveal reveal-delay-3">
+        <div class="metrica-card reveal reveal-delay-2">
           <span class="metrica-num">∞</span>
           <span class="metrica-label">Potencial de Ventas</span>
         </div>
-        <div class="metrica-card reveal reveal-delay-4">
-          <span class="metrica-num">0</span>
-          <span class="metrica-label">Límite de Escala</span>
+        <div class="metrica-card reveal reveal-delay-3">
+          <span class="metrica-num">∞</span>
+          <span class="metrica-label">Onda Expansiva</span>
         </div>
       </div>
     </div>
@@ -1504,7 +1526,7 @@
         </p>
         <div class="testimonio-author reveal reveal-delay-1">
           <div class="testimonio-avatar">
-            <img src="assets/hernan-perfil.webp" alt="Cliente YO SOY CHARCO" />
+            <img src="assets/isotipo-charco-web.png" alt="Yo Soy C.H.A.R.C.O." style="object-fit:contain;padding:10px;" />
           </div>
           <div class="testimonio-name-block">
             <div class="testimonio-name">Socio del sistema</div>
@@ -1600,18 +1622,18 @@
 
         <div class="contacto-form reveal reveal-delay-2">
           <div class="form-title">Enviame un mensaje</div>
-          <form onsubmit="handleForm(event)">
+          <form onsubmit="return handleForm(event)">
             <div class="form-group">
               <label>Nombre</label>
-              <input type="text" placeholder="Tu nombre completo" required />
+              <input id="cf-nombre" type="text" placeholder="Tu nombre completo" required />
             </div>
             <div class="form-group">
               <label>WhatsApp / Email</label>
-              <input type="text" placeholder="¿Cómo te contacto?" required />
+              <input id="cf-contacto" type="text" placeholder="¿Cómo te contacto?" required />
             </div>
             <div class="form-group">
               <label>¿Qué te interesa?</label>
-              <select>
+              <select id="cf-interes">
                 <option>Quiero comprar un libro</option>
                 <option>Me interesa Amway</option>
                 <option>Quiero ser socio del sistema</option>
@@ -1620,9 +1642,9 @@
             </div>
             <div class="form-group">
               <label>Mensaje</label>
-              <textarea placeholder="Contame qué buscás..."></textarea>
+              <textarea id="cf-mensaje" placeholder="Contame qué buscás..."></textarea>
             </div>
-            <button type="submit" class="btn-enviar">Enviar mensaje →</button>
+            <button type="submit" class="btn-enviar">Enviar por WhatsApp →</button>
           </form>
         </div>
       </div>
@@ -1639,7 +1661,7 @@
       <a href="https://www.instagram.com/hernanalejandrovenegaslagos" class="footer-red" target="_blank" rel="noopener" title="Instagram">📸</a>
       <a href="https://wa.me/5492996335329" class="footer-red" target="_blank" rel="noopener" title="WhatsApp">💬</a>
     </div>
-    <p class="footer-copy">© 2026 Yo Soy C.H.A.R.C.O. — Hernán A. Venegas Lagos · Plottier, Neuquén, Argentina</p>
+    <p class="footer-copy">© 2026 Yo Soy C.H.A.R.C.O. — Hernán Alejandro Venegas Lagos · Plottier, Neuquén, Argentina</p>
   </footer>
 
   <!-- WhatsApp Float -->
@@ -1689,17 +1711,22 @@
       if (heroParticles) heroParticles.style.transform = `translateY(${y * 0.3}px)`;
     }, { passive: true });
 
-    // Form handler
+    // Form handler — arma un WhatsApp con los datos y abre el chat de Hernán
     function handleForm(e) {
       e.preventDefault();
+      const v = id => (document.getElementById(id)?.value || '').trim();
+      const nombre = v('cf-nombre'), contacto = v('cf-contacto');
+      const interes = document.getElementById('cf-interes')?.value || '';
+      const mensaje = v('cf-mensaje');
+      const texto = 'Hola Hernán! Soy ' + nombre + '.\n' +
+        'Me interesa: ' + interes + '.\n' +
+        (mensaje ? 'Mensaje: ' + mensaje + '\n' : '') +
+        'Mi contacto: ' + contacto;
+      window.open('https://wa.me/5492996335329?text=' + encodeURIComponent(texto), '_blank');
       const btn = e.target.querySelector('.btn-enviar');
-      btn.textContent = '✓ Mensaje enviado';
-      btn.style.background = '#2d7a4f';
-      setTimeout(() => {
-        btn.textContent = 'Enviar mensaje →';
-        btn.style.background = '';
-        e.target.reset();
-      }, 3000);
+      btn.textContent = '✓ Abriendo WhatsApp…';
+      setTimeout(() => { btn.textContent = 'Enviar por WhatsApp →'; }, 3000);
+      return false;
     }
   </script>
 
